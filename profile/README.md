@@ -8,9 +8,11 @@ Syntopica is a personal wiki that an agent maintains and a person owns: synthesi
 
 **The engine is public. The data is private.** An instance keeps its pages, captures and configuration in a separate directory. The engines find it through `syntopica.config.json`; personal content stays outside the engine repositories.
 
-- [brain](https://github.com/syntopica/brain) is the Python wiki engine. It builds the page index and link graph, checks page conventions and diagnoses instance setup.
-- [clips](https://github.com/syntopica/clips) is the TypeScript and Python capture and ingest engine. It triages saved web content and synthesizes wiki pages through a model, with validation and human diff approval before changes are accepted.
-- [codeality](https://github.com/syntopica/codeality) holds shared engineering standards.
-- [agents](https://github.com/syntopica/agents) is the agent control plane.
+**Start here:** hand [syntopica/syntopica](https://github.com/syntopica/syntopica) to your agent. Its `AGENTS.md` walks Claude Code or Codex through choosing components, installing them, verifying every engine and connecting itself.
 
-Three companion repositories are private: **clipper**, the Chrome extension for clipping pages; **capture**, the phone URL inbox; and **mem**, the conversation index.
+- [brain](https://github.com/syntopica/brain) is the Python wiki engine: index, link graph, lint, doctor.
+- [clips](https://github.com/syntopica/clips) is the capture and ingest engine: it turns saved web content into cited pages through a model, with validation and human diff approval.
+- [atrium](https://github.com/syntopica/atrium) is retrieval over your own agent conversation history, served over MCP.
+- [agents](https://github.com/syntopica/agents) is the agent control plane, and the conversation export atrium indexes.
+- [clipper](https://github.com/syntopica/clipper) is the Chrome extension that clips pages into a GitHub inbox; [capture](https://github.com/syntopica/capture) is the phone URL inbox. Both need a fork and a deployment of your own.
+- [test-data](https://github.com/syntopica/test-data) is a synthetic instance for exercising the engines; [codeality](https://github.com/syntopica/codeality) holds shared engineering standards.
